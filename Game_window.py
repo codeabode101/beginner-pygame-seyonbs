@@ -6,7 +6,10 @@ WIDTH =  800
 pygame.display.set_caption('my first window')
 running = True
 while running:
-    screen.fill((0, 0, 0))            
+    keys = keys =  pygame.key.get_pressed()
+    if keys[pygame.K_SPACE]:
+        screen.fill((255,0,0))    
+    screen.fill((180,180,180))            
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
